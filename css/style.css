@@ -562,6 +562,10 @@ display: block;
 	width:100%;
 	margin:auto;
 }
+.advantages-wrapper h2{
+	color:#2F6C6D;
+}
+
 .advantages{
 	display:flex;
 	flex-direction:row;
@@ -596,6 +600,7 @@ display: block;
 }
 .latest-wrap h2{
 	font-family:Open Sans, sans-serif;
+	color:#2F6C6D;
 }
 .latest{
 	width:1100px;
@@ -655,7 +660,7 @@ display: block;
     padding-top: 20px;
 	display:flex;
 	flex-direction:row;
-	align-items:center;
+	align-items:flex-start;
 	justify-content:space-between;
 }
 .footer-contact{
@@ -697,7 +702,7 @@ display: block;
 } */
 .contact-title{
 	color:#fff;
-}
-.contact-title{
 	font-size:18px;
+	margin-bottom:10px;
 }
+
