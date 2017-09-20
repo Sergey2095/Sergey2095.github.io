@@ -9,17 +9,25 @@
 	$(document).ready(function() {
 	
 	var header = $(".header"); // Меню
+	var headerBottomPanel = $('.header-bottom-panel');
 	var scrollPrev = 0 // Предыдущее значение скролла
 	
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop(); // Высота скролла в px
+		
 		if(scrolled > 50){
 			header.css({
-			"top": -55+ "px"
+			"top": -75+ "px"
+		});
+		headerBottomPanel.css({
+			"padding-top":+20+"px"
 		});
 		}else{
 			header.css({
 			"top": 0 + "px"
+		});
+		headerBottomPanel.css({
+			"padding-top":-20+"px"
 		});
 		}
 			
