@@ -22,9 +22,17 @@
 <div class="wrap">
 	<div class="header">
 		<div class="header-top-panel">
-			<div>+38(095)-83-53-469</div>
-			<div>+38(096)-99-93-242</div>
-			<div class="search"></div>
+			<div class="tel-first">+38(095)-83-53-469</div>
+			<div class="tel-second">+38(096)-99-93-242</div>
+                <div class="search-form">
+                    <form role="search" method="get" id="searchform" class="searchform" action="https://climat-comfort.000webhostapp.com">
+    <div class="clearfx">
+        <input id="s" class="hide" type="search" name="request" placeholder="Search …" value="" name="s" title="Найти:">
+        <input id="searchsubmit" type="submit" name="find" value="search">
+    </div>
+</form>
+</div>
+			<!-- <div class="search"></div> -->
 		</div>
 		
 		<div  class="header-bottom-panel">
@@ -40,8 +48,12 @@
 				  <li><a href="#">БЛОГ</a></li>
 				  <li><a href="#">КОНТАКТЫ</a></li>
 			</ul>
+			<div class="compar-cart-wrap">
+				<div class="compar">	
+				</div>
 				<div class="cart">	
 				</div>
+			</div>
 
 		</div>
 
@@ -65,6 +77,8 @@
 			<div class="brand-6 each-brand"></div>
 			<div class="brand-7 each-brand"></div>
 			<div class="brand-8 each-brand"></div>
+			<div class="brand-9 each-brand"></div>
+			<div class="brand-10 each-brand"></div>
 		</div>
 	</div>
 	
@@ -163,15 +177,29 @@
 		</div>
 	</div>
 	</section>
+	<footer>
 	<div class="footer">
-		<div class="footer-menu">
-			<div class="graph footer-menu-item">ГРАФИК РАБОТЫ</div>
-			<div class="faq footer-menu-item">ВОПРОСЫ И ОТВЕТЫ</div>
-			<div class="feedback footer-menu-item">ОБРАТНАЯ СВЯЗЬ</div>
+		<div class="footer-contact">
+			<span class="contact-title">Контакты</span>
+			<span class="contact-tel">(095)-835-34-96</span>
+			<span class="contact-email">climat@gmail.com</span>
+			<span class="conatac-graf">Работа с 9:00 до 18:00</span>
+		</div>	
+		<div class="footer-inf">
+			<a href="#"><span class="contact-title">Информация<span></a>
+			<a href="#"><span class="graph footer-menu-item">Доставка и оплата</span></a>
+			<a href="#"><span class="faq footer-menu-item">Сервис</span></a>
+			<a href="#"><span class="feedback footer-menu-item">Блог</span></a>
+		</div>		
+		<div class="footer-feedback">
+			<span class="contact-title">Обратная связь</span>
+			<input type="text" placeholder="Имя"/><br>
+			<input type="text" placeholder="Телефон"/><br>
+			<input type="button" value="Отправить"/>
 		</div>
 		
-		<div class="copyright"></div>
 	</div>
+	</footer>
 </div>
 </body>
 </html>

@@ -23,5 +23,36 @@
 		});
 		}
 			
-	});			
-});
+	});				
+	});
+
+		function search() {
+        $('#searchform').submit(function(){
+            if( !$('#s').hasClass('hide') && $('#s').val() == '') {
+                return false;
+            }
+
+            if($('#s').hasClass('hide')){
+                $('#s').clearQueue().animate({
+                    width: '100%',
+                    padding: '0 46px 0 10px'
+                }, 200);
+
+                $('#s').focus();
+                $('#s').removeClass('hide');
+                $('#searchsubmit').addClass('opening');
+                return false;
+            }
+        });
+        $('body').on('click', function(){
+            if((!$('#s').hasClass('hide')) && (!$('#s').is(":focus")) && ($('#s').val() == '')){
+
+                $('#s').animate({
+                    width: '0',
+                    padding: '0'
+                }, 200);
+                $('#s').addClass('hide');
+                $('#searchsubmit').removeClass('opening');
+            }
+        });
+    } search();
