@@ -17,7 +17,7 @@
 		
 		if(scrolled > 50){
 			header.css({
-			"top": -75+ "px"
+			"top": -50+ "px"
 		});
 		headerBottomPanel.css({
 			"padding-top":+20+"px"
@@ -27,7 +27,7 @@
 			"top": 0 + "px"
 		});
 		headerBottomPanel.css({
-			"padding-top":-20+"px"
+			"padding-top":0+"px"
 		});
 		}
 			
