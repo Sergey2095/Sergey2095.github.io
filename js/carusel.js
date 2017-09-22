@@ -8,7 +8,8 @@
 	});
 	$(document).ready(function() {
 	var searchSubmit = $(".search-submit");
-	var searchText = $(".search-text"); // Меню
+	var searchText = $(".search-text"); 
+	var header = $(".header");// Меню
 	var headerBottomPanel = $('.header-bottom-panel');
 	var scrollPrev = 0 // Предыдущее значение скролла
 	
