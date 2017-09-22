@@ -7,8 +7,8 @@
     });
 	});
 	$(document).ready(function() {
-	
-	var header = $(".header"); // Меню
+	var searchSubmit = $(".search-submit");
+	var searchText = $(".search-text"); // Меню
 	var headerBottomPanel = $('.header-bottom-panel');
 	var scrollPrev = 0 // Предыдущее значение скролла
 	
@@ -17,50 +17,33 @@
 		
 		if(scrolled > 50){
 			header.css({
-			"top": -50+ "px"
+			"top": -80+ "px"
 		});
 		headerBottomPanel.css({
-			"padding-top":+20+"px"
+			"padding-top":+20+"px",
+			"background-color":"#005A69"
 		});
 		}else{
 			header.css({
 			"top": 0 + "px"
 		});
 		headerBottomPanel.css({
-			"padding-top":0+"px"
+			"padding-top":0+"px",
+			"background":"transparent"
 		});
 		}
 			
-	});				
+	});	
+searchSubmit.click(function(){
+			searchText.css({
+			"width":200+"px",
+			"z-index":"1",
+			"cursor":"text",
+			"background-color":"#fff",
+			"right":30+"px"
+		});
+})
+	
 	});
 
-		function search() {
-        $('#searchform').submit(function(){
-            if( !$('#s').hasClass('hide') && $('#s').val() == '') {
-                return false;
-            }
-
-            if($('#s').hasClass('hide')){
-                $('#s').clearQueue().animate({
-                    width: '100%',
-                    padding: '0 46px 0 10px'
-                }, 200);
-
-                $('#s').focus();
-                $('#s').removeClass('hide');
-                $('#searchsubmit').addClass('opening');
-                return false;
-            }
-        });
-        $('body').on('click', function(){
-            if((!$('#s').hasClass('hide')) && (!$('#s').is(":focus")) && ($('#s').val() == '')){
-
-                $('#s').animate({
-                    width: '0',
-                    padding: '0'
-                }, 200);
-                $('#s').addClass('hide');
-                $('#searchsubmit').removeClass('opening');
-            }
-        });
-    } search();
+		
