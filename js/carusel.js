@@ -7,6 +7,7 @@
     });
 	});
 	$(document).ready(function() {
+	var body = $('body');
 	var searchSubmit = $(".search-submit");
 	var searchText = $(".search-text"); 
 	var header = $(".header");// Меню
@@ -41,8 +42,27 @@ searchSubmit.click(function(){
 			"z-index":"1",
 			"cursor":"text",
 			"background-color":"#fff",
-			"right":30+"px"
+			"right":25+"px"
 		});
+		searchSubmit.css({
+			"background-color":"#5ecb32"
+		});
+});
+body.click(function(e){
+			if (!searchText.is(e.target) // если клик был не по нашему блоку
+		    && searchText.has(e.target).length === 0 && !searchSubmit.is(e.target) // если клик был не по нашему блоку
+		    && searchSubmit.has(e.target).length === 0) {				// и не по его дочерним элементам
+			searchSubmit.css({
+			"background-color":"transparent"
+		});
+					searchText.css({
+			"width":0+"px",
+			"z-index":"0",
+			"cursor":"text",
+			"background-color":"transparent",
+			"right":0+"px"
+		});
+			}
 })
 	
 	});

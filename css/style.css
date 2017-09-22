@@ -54,11 +54,12 @@ body{
 }
 .search-text {
   height: 30px;
-  font-size: 24px;
+  font-size: 16px;
   display: inline-block;
   font-family: "Lato";
   font-weight: 100;
   border: none;
+  border-radius:5px;
   outline: none;
   color: #555;
   padding: 3px;
@@ -597,7 +598,7 @@ display: block;
 	width:200px;
 	font-size:24px;
 	font-family:Open Sans, sans-serif;
-	margin-left:100px;
+	margin-left:150px;
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
@@ -713,6 +714,9 @@ width:150px !important;
 	flex-direction:column;
 	align-items:flex-start;
 	justify-content:center;
+}
+.footer-feedback .contact-title{
+	margin-bottom:20px;
 }
 /* .footer-feedback input{
 	border-radius:5px;
