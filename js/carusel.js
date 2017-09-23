@@ -19,10 +19,10 @@
 		
 		if(scrolled > 50){
 			header.css({
-			"top": -80+ "px"
+			"top": -25+ "px"
 		});
 		headerBottomPanel.css({
-			"padding-top":+20+"px",
+			"padding-top":0+"px",
 			"background-color":"#005A69"
 		});
 		}else{
