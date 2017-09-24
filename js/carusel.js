@@ -20,6 +20,30 @@
 	var headerBottomPanel = $('.header-bottom-panel');
 	var scrollPrev = 0 // Предыдущее значение скролла
 	
+			var scrolled = $(window).scrollTop(); // Высота скролла в px
+		
+		if(scrolled > 50){
+			header.css({
+			"transform": "translateY(-25px)"
+			/* "top": -25+ "px" */
+		});
+		
+		headerBottomPanel.css({
+			"padding-top":0+"px",
+			"background-color":"#005A69"
+		}); 
+		}else{
+			header.css({
+			/* "top": 0 + "px" */
+			"transform": "translateY(0px)"
+
+		});
+		headerBottomPanel.css({
+			"padding-top":0+"px",
+			"background":"transparent"
+		});
+		}
+	
 	
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop(); // Высота скролла в px
