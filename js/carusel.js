@@ -1,10 +1,16 @@
     $(document).ready(function(){
-		    $('.single-item').slick({
+		    $('.single-item-1').slick({
       centerMode: true,
       slidesToShow: 5,
 	  autoplay: true,
 	  autoplaySpeed:1500,
     });
+	
+	$('.single-item').slick({
+	arrows:true,
+      prevArrow:"<img class='a-left control-c prev slick-prev' src='img/back.png'>",
+      nextArrow:"<img class='a-right control-c next slick-next' src='img/next.png'>",
+	});
 	});
 	$(document).ready(function() {
 	var body = $('body');
@@ -14,6 +20,7 @@
 	var headerBottomPanel = $('.header-bottom-panel');
 	var scrollPrev = 0 // Предыдущее значение скролла
 	
+	
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop(); // Высота скролла в px
 		
@@ -21,10 +28,11 @@
 			header.css({
 			"top": -25+ "px"
 		});
+		
 		headerBottomPanel.css({
 			"padding-top":0+"px",
 			"background-color":"#005A69"
-		});
+		}); 
 		}else{
 			header.css({
 			"top": 0 + "px"
@@ -42,10 +50,11 @@ searchSubmit.click(function(){
 			"z-index":"1",
 			"cursor":"text",
 			"background-color":"#fff",
-			"right":25+"px"
+			"right":75+"px"
 		});
 		searchSubmit.css({
-			"background-color":"#5ecb32"
+			"background": "url(../img/search-hover.png)no-repeat"
+			/* "background-color":"#5ecb32" */
 		});
 });
 body.click(function(e){
@@ -53,7 +62,8 @@ body.click(function(e){
 		    && searchText.has(e.target).length === 0 && !searchSubmit.is(e.target) // если клик был не по нашему блоку
 		    && searchSubmit.has(e.target).length === 0) {				// и не по его дочерним элементам
 			searchSubmit.css({
-			"background-color":"transparent"
+			/* "background-color":"transparent" */
+			"background": "url(../img/search.png)no-repeat"
 		});
 					searchText.css({
 			"width":0+"px",
