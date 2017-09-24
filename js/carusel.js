@@ -26,7 +26,8 @@
 		
 		if(scrolled > 50){
 			header.css({
-			"top": -25+ "px"
+			"transform": "translateY(-25px)"
+			/* "top": -25+ "px" */
 		});
 		
 		headerBottomPanel.css({
@@ -35,7 +36,9 @@
 		}); 
 		}else{
 			header.css({
-			"top": 0 + "px"
+			/* "top": 0 + "px" */
+			"transform": "translateY(0px)"
+
 		});
 		headerBottomPanel.css({
 			"padding-top":0+"px",
@@ -50,11 +53,11 @@ searchSubmit.click(function(){
 			"z-index":"1",
 			"cursor":"text",
 			"background-color":"#fff",
-			"right":75+"px"
+			"right":10+"px"
 		});
 		searchSubmit.css({
-			"background": "url(../img/search-hover.png)no-repeat"
-			/* "background-color":"#5ecb32" */
+			"background": "url(img/search-hover.png) no-repeat",
+			"background-position": "center center"
 		});
 });
 body.click(function(e){
@@ -62,8 +65,9 @@ body.click(function(e){
 		    && searchText.has(e.target).length === 0 && !searchSubmit.is(e.target) // если клик был не по нашему блоку
 		    && searchSubmit.has(e.target).length === 0) {				// и не по его дочерним элементам
 			searchSubmit.css({
-			/* "background-color":"transparent" */
-			"background": "url(../img/search.png)no-repeat"
+			"background": "url(img/search.png)no-repeat",
+			"background-position": "center center",
+
 		});
 					searchText.css({
 			"width":0+"px",
