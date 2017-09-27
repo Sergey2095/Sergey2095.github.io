@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Exo+2:400,800' rel='stylesheet' type='text/css'>
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -20,8 +20,8 @@
 </head>
 <body>
 <div class="wrap">
-	<div class="header">
-		<div class="header-top-panel">
+	<div class="header-product">
+		<div class="header-top-panel-prod">
 			<div class="tel-first">+38(095)-83-53-469</div>
 			<div class="tel-second">+38(096)-99-93-242</div>
 
@@ -29,13 +29,13 @@
 			<!-- <div class="search"></div> -->
 		</div>
 		
-		<div  class="header-bottom-panel">
-			<div class="logo">
-				<i><img src="img/logo.png"/></i><span>Климат-комфорт</span>
-			</div>
+		<div  class="header-bottom-panel-prod">
+			<a href="../index.html"><div class="logo">
+				<i><img src="../img/logo.png"/></i><span>Климат-комфорт</span>
+			</div></a>
 
 			<ul class="menu">
-				  <li><a href="product/product.html">ТОВАРЫ</a></li>
+				  <li><a href="#">ТОВАРЫ</a></li>
 				  <li><a href="#">АКЦИИ</a></li>
 				  <li><a href="#">ДОСТАВКА И ОПЛАТА</a></li>
 				  <li><a href="#">СЕРВИС</a></li>
@@ -78,16 +78,16 @@
 		</div>
 
 	</div>
-	<div class="main-image">
+<!-- 	<div class="main-image">
 		<p>С нами комфортно!</p>
 		<div class="bunner_buttons">
 			<i><a>Кондиционеры</a></i>
 			<i><a>Отопление</a></i>
 			<i><a>ЭКО</a></i>
 		</div>
-	</div>
+	</div> -->
 	
-	<div class="brand-carusel">
+<!-- 	<div class="brand-carusel">
 		<div class="slider single-item-1">
 			<div class="brand-1 each-brand"></div>
 			<div class="brand-2 each-brand"></div>
@@ -100,14 +100,198 @@
 			<div class="brand-9 each-brand"></div>
 			<div class="brand-10 each-brand"></div>
 		</div>
+	</div> -->
+	<div class="product-wrap">
+	<div class="filter">
+		<div class="container">
+  <h2>Фильтр выборки</h2>
+ <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Кондиционеры</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+			<div>
+			<p>Производитель</p>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Neoclima</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Leberg</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Carrier</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Toshiba</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >LG</label>
+				</div>		
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Panasonic</label>
+				</div>
+			</div>
+			
+			<div class="filter-price">
+				<p>Цена</p>
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
+			</div><br><br><br><br>
+			
+			<div class="filter-square">
+				<p>Площадь помещения, кв.м.</p>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >15</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >20</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >25</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >30</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >35</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >45</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >50</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >60</label>
+				</div>
+			</div>
+			
+			<div class="filter-invert">
+			<p>Инвертор</p>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Да</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Нет</label>
+				</div>
+			</div>
+			
+				<div class="filter-invert">
+				<p>Wi-Fi модуль</p>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Да</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Нет</label>
+				</div>
+			</div>
+			
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Эко (Очистители и увлажнители воздуха)</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Воздушные завесы</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Радиаторы отопления</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Газовые колонки</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Злектрические водонагреватели</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Котлы</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+		    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Конвекторы</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+</div>
 	</div>
-	
 	<div class="popular">
-		<p align="center">Популярные товары</p>
+<!-- 		<p align="center">Популярные товары</p> -->
 		<div class="pop-wrapper">
 		<div class="pop-conditioners">
 			<div class="conditioner-col">
-				<div class="col-1 cond"><img src="img/pop-cond-1.jpg"/></div>
+				<div class="col-1 cond"><img src="../img/pop-cond-1.jpg"/></div>
 				<a href="#" class="cond-name">Кондиционер LBS-ODN10/LBU-ODN10</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -118,7 +302,7 @@
 				</div>
 			</div>
 			<div class="conditioner-col">
-				<div class="col-2 cond"><img src="img/pop-cond-2.jpg"/></div>
+				<div class="col-2 cond"><img src="../img/pop-cond-2.jpg"/></div>
 				<a href="#" class="cond-name">Leberg LBS-ODN10/LBU-ODN10</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -129,7 +313,7 @@
 				</div>
 			</div>
 			<div class="conditioner-col">
-				<div class="col-3 cond"><img src="img/pop-cond-3.jpg"/></div>
+				<div class="col-3 cond"><img src="../img/pop-cond-3.jpg"/></div>
 				<a href="#" class="cond-name">Vestfrost VFE09AF5</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -140,7 +324,7 @@
 				</div>
 			</div>
 			<div class="conditioner-col">
-				<div class="col-4 cond"><img src="img/pop-cond-4.jpg"/></div>
+				<div class="col-4 cond"><img src="../img/pop-cond-4.jpg"/></div>
 				<a href="#" class="cond-name">Кондиционер сплит Leberg LBS-ODN10/LBU-ODN10</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -151,7 +335,7 @@
 				</div>
 			</div>
 			<div class="conditioner-col">
-				<div class="col-5 cond"><img src="img/pop-cond-5.jpg"/></div>
+				<div class="col-5 cond"><img src="../img/pop-cond-5.jpg"/></div>
 				<a href="#" class="cond-name">Кондиционер VFE09AF5</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -162,7 +346,7 @@
 				</div>
 			</div>
 			<div class="conditioner-col">
-				<div class="col-6 cond"><img src="img/pop-cond-6.jpg"/></div>
+				<div class="col-6 cond"><img src="../img/pop-cond-6.jpg"/></div>
 				<a href="#" class="cond-name">Кондиционер сплит Vestfrost VFE09AF5</a>
 				<div class="price-buy-compare">
 					<div class="price">$999</div>
@@ -174,6 +358,7 @@
 			</div>
 		</div>
 		</div>
+	</div>
 	</div>
 <!-- 	<section class="offers-wrap">
 	<div class="shares">Акции!</div>
@@ -208,7 +393,7 @@
 	</div>
 	</section> -->
 		
-	<div class="advantages-wrapper">
+<!-- 	<div class="advantages-wrapper">
 	<h2 align="center">Наши преимущества</h2>
 	<div class="advantages">
 
@@ -225,15 +410,12 @@
 	<P>Доставка</P>
 	</div>
 	</div>
-	</div>
-	<section>
+	</div> -->
+	<!-- <section>
 
 	<div class="latest-wrap">
 		<h2 align="center">Новости</h2>
 		<div class="single-item">
-<!-- 			<div style="width:300px; height:300px; background-color:red;">1</div>
-			<div style="width:300px; height:300px; background-color:blue;">1</div>
-			<div style="width:300px; height:300px; background-color:yellow;">1</div> -->
 		<div class="latest">
 			<div class="latest-img">
 				<img src="img/latest-cond-1.jpeg"/>
@@ -273,7 +455,7 @@
 		
 		</div>
 	</div>
-	</section>
+	</section> -->
 	<footer>
 	<div class="footer">
 		<div class="footer-contact">
