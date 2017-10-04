@@ -921,13 +921,175 @@ display: block;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	align-items:center
+	align-items:start;
 }
-.filter{
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+}
+/* .filter{
 	padding-top:100px;
 	width:300px;
 	height:inherit;
 }
+.prod-sub-title{
+	text-transform:uppercase;
+	font-size:14px;
+	font-family:Open Sans, sans-serif;
+}
 .filter .container{
 	width:100%;
+	color:#949496;
+} */
+.container {
+ max-width: 220px !important;
+ margin-top:100px;
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+.accordion-option .toggle-accordion:before {
+  content: "Паказать все";
+}
+
+.accordion-option .toggle-accordion.active:before {
+  content: "Свернуть все";
+}
+.product-filter-button{
+	position:relative;
+	width:1200px;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+.product-filter-button i{
+	font-style:normal;
+	width:100px;
+	height:50px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+		color:#000;
+
+	border: 1px solid #949496;;
+	border-radius:7px;
+	text-align:center;
+	vertical-align:middle;
+margin-right:30px;
+	font-size:12px;
+}
+
+.product-filter-button a{
+	color:#000;
+	text-decoration:none;
+}
+.product-filter-button i:first-child{
+	margin-left:0px;
+}
+.product-filter-button a:hover{
+	text-decoration:none;
+	color:#000;
+}
+.product-filter-button i:hover{
+	border:none;
+	cursor:pointer;
+	background-color:#5ecb32;
+	text-decoration:none;
+}
+.eco-accord-container{
+	display:none;
+}
+.cond-accord-container{
+	display:none;
+}
+.air-accord-container{
+	display:none;
+}
+.radiator-accord-container{
+	display:none;
+}
+.gas-accord-container{
+	display:none;
+}
+.electro-accord-container{
+	display:none;
+}
+.cotel-accord-container{
+	display:none;
+}
+.convector-accord-container{
+	display:none;
 }

@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="slick/slick.min.js"></script>
       <script src="js/carusel.js"></script>
+	        <script src="js/filter.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -64,7 +65,7 @@
 				<a href="#" class="cart">
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 459.529 459.529" style="enable-background:new 0 0 459.529 459.529;" xml:space="preserve" width="24px" height=24px">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 459.529 459.529" style="enable-background:new 0 0 459.529 459.529;" xml:space="preserve" width="24px" height="24px">
 <g>
 	<g>
 		<path d="M17,55.231h48.733l69.417,251.033c1.983,7.367,8.783,12.467,16.433,12.467h213.35c6.8,0,12.75-3.967,15.583-10.2    l77.633-178.5c2.267-5.383,1.7-11.333-1.417-16.15c-3.117-4.817-8.5-7.65-14.167-7.65H206.833c-9.35,0-17,7.65-17,17    s7.65,17,17,17H416.5l-62.9,144.5H164.333L94.917,33.698c-1.983-7.367-8.783-12.467-16.433-12.467H17c-9.35,0-17,7.65-17,17    S7.65,55.231,17,55.231z" fill="#FFFFFF"/>
@@ -78,44 +79,26 @@
 		</div>
 
 	</div>
-<!-- 	<div class="main-image">
-		<p>С нами комфортно!</p>
-		<div class="bunner_buttons">
-			<i><a>Кондиционеры</a></i>
-			<i><a>Отопление</a></i>
-			<i><a>ЭКО</a></i>
-		</div>
-	</div> -->
-	
-<!-- 	<div class="brand-carusel">
-		<div class="slider single-item-1">
-			<div class="brand-1 each-brand"></div>
-			<div class="brand-2 each-brand"></div>
-			<div class="brand-3 each-brand"></div>
-			<div class="brand-4 each-brand"></div>
-			<div class="brand-5 each-brand"></div>
-			<div class="brand-6 each-brand"></div>
-			<div class="brand-7 each-brand"></div>
-			<div class="brand-8 each-brand"></div>
-			<div class="brand-9 each-brand"></div>
-			<div class="brand-10 each-brand"></div>
-		</div>
-	</div> -->
+
+
 	<div class="product-wrap">
-	<div class="filter">
-		<div class="container">
-  <h2>Фильтр</h2>
- <div class="panel-group" id="accordion">
+<div class="container cond-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Кондиционеры</a>
-        </h4>
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Производитель
+        </a>
+      </h4>
       </div>
-      <div id="collapse1" class="panel-collapse collapse in">
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
         <div class="panel-body">
-			<div>
-			<p>Производитель</p>
 				<div class="checkbox">
 				  <label><input type="checkbox" value="">Neoclima</label>
 				</div>
@@ -134,10 +117,19 @@
 				<div class="checkbox">
 				  <label><input type="checkbox" value="" >Panasonic</label>
 				</div>
-			</div>
-			
-			<div class="filter-price">
-				<p>Цена</p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
 				<div class="col-xs-1">
 				<label for="ex1">от</label>
 				<input class="form-control" id="ex1" type="text">
@@ -146,11 +138,20 @@
 				<label for="ex1">до</label>
 				<input class="form-control" id="ex1" type="text">
 				</div>
-			</div><br><br><br><br>
-			
-			<div class="filter-square">
-				<p>Площадь помещения, кв.м.</p>
-				<div class="checkbox">
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Площадь помещения, кв.м.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+							<div class="checkbox">
 				  <label><input type="checkbox" value="" >15</label>
 				</div>				
 				<div class="checkbox">
@@ -173,120 +174,805 @@
 				</div>				
 				<div class="checkbox">
 				  <label><input type="checkbox" value="" >60</label>
-				</div>
-			</div>
-			
-			<div class="filter-invert">
-			<p>Инвертор</p>
+				</div> 
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFore">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Инвертор
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Да</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Нет</label>
+				</div> 
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Wi-Fi модуль
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
 				<div class="checkbox">
 				  <label><input type="checkbox" value="" >Да</label>
 				</div>				
 				<div class="checkbox">
 				  <label><input type="checkbox" value="" >Нет</label>
 				</div>
-			</div>
-			
-				<div class="filter-invert">
-				<p>Wi-Fi модуль</p>
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingSix">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+          Еще что-то
+        </a>
+      </h4>
+      </div>
+      <div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+        <div class="panel-body">
+			Anim pariatur cliche reprehenderit, enim 
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container eco-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Разделы
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
 				<div class="checkbox">
-				  <label><input type="checkbox" value="" >Да</label>
-				</div>				
-				<div class="checkbox">
-				  <label><input type="checkbox" value="" >Нет</label>
+				  <label><input type="checkbox" value="">Ультразвуковые увлажнители</label>
 				</div>
-			</div>
-			
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Мойка воздуха</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Комплексные воздухоочистители</label>
+				</div>				
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Производители
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Neoclima</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Panasonic</label>
+				</div>				
 		</div>
       </div>
     </div>
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingThree">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Эко (Очистители и увлажнители воздуха)</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Площадь помещения, кв.м.
+        </a>
+      </h4>
       </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >До 30</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >До 40</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >До 50</label>
+				</div>				
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFore">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Объем резервуара для воды, л.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >4,1</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >4,6</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >5</label>
+				</div>	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >6,2</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >9</label>
+				</div>
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container air-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
+			
+        </div>
       </div>
     </div>
     <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingTwo">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Воздушные завесы</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Тип нагрева
+        </a>
+      </h4>
       </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">С водяным нагревом</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">с электрическим нагревом</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >без нагрева</label>
+				</div>				
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Высота установки, м.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,5</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >2,5</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >3,0</label>
+				</div>	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >4,0</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >6,0</label>
+				</div>				
+		</div>
       </div>
     </div>
 	    <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingFore">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Радиаторы отопления</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Ширина двери, м.
+        </a>
+      </h4>
       </div>
-      <div id="collapse4" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >0,7</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,0</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,2</label>
+				</div>	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,4</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,6</label>
+				</div>
+								<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,8</label>
+				</div>
+								<div class="checkbox">
+				  <label><input type="checkbox" value="" >2,0</label>
+				</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container radiator-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Производитель
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Roda</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Calgoni</label>
+				</div>			
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>				
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Тип радиатора
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Алюминиевый</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Биметаллический</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Стальной</label>
+				</div>				
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container gas-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
+		</div>
+      </div>
+    </div>
+	
+	<div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFore">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Тип камеры сгорания
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Открытый</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Закрытый</label>
+				</div>				
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container electro-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>				
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Модель
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Aqua Inox M</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Aqua White</label>
+				</div>		
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Palladium</label>
+				</div>					
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Объем, л.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >10</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >15</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >30</label>
+				</div>		
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >50</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >80</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >100</label>
+				</div>	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >120</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >150</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >200</label>
+				</div>					
+		</div>
       </div>
     </div>
 	    <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingFore">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Газовые колонки</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Тип установки
+        </a>
+      </h4>
       </div>
-      <div id="collapse5" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Горизонтальный</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Вертикальный</label>
+				</div>				
+
+		</div>
       </div>
     </div>
 	    <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingFive">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Злектрические водонагреватели</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Форма бойлера
+        </a>
+      </h4>
       </div>
-      <div id="collapse6" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-      </div>
-    </div>
-	    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Котлы</a>
-        </h4>
-      </div>
-      <div id="collapse7" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Круглый</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Плоский</label>
+				</div>	
+		</div>
       </div>
     </div>
 		    <div class="panel panel-default">
-      <div class="panel-heading">
+      <div class="panel-heading" role="tab" id="headingFive">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Конвекторы</a>
-        </h4>
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Тип нагревательного элемента
+        </a>
+      </h4>
       </div>
-      <div id="collapse8" class="panel-collapse collapse">
-        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Сухой</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Мокрый (обычный)</label>
+				</div>	
+		</div>
       </div>
     </div>
-  </div> 
+  </div>
 </div>
-	</div>
+
+<div class="container cotel-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Производитель
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Roda</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Immergas</label>
+				</div>			
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>			
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Тип котлов
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Электрический</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Газовый</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Твердотопливный</label>
+				</div>				
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFore">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Топливо
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Природный газ</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Уголь</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Дрова</label>
+				</div>	
+		</div>
+      </div>
+    </div>
+	    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFive">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+          Мощьность, кВт.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
+		</div>
+      </div>
+    </div>
+		    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingFore">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFore" aria-expanded="true" aria-controls="collapseFore">
+          Тип установки
+        </a>
+      </h4>
+      </div>
+      <div id="collapseFore" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFore">
+        <div class="panel-body">					
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Напольный</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Настенный</label>
+				</div>	
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container convector-accord-container">
+  <div class="accordion-option">
+<!--     <h3 class="title">Lorem Ipsum</h3> -->
+    <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Производитель
+        </a>
+      </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Neoclima</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Roda</label>
+				</div>	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Noirot</label>
+				</div>					
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          Цена, грн.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <div class="panel-body">
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>				
+		</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingThree">
+        <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          Мощность, кВт.
+        </a>
+      </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">	
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >0,5</label>
+				</div>							
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,0</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >1,5</label>
+				</div>			
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >2,0</label>
+				</div>				
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >2,5</label>
+				</div>					
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 	<div class="popular">
+		<div class="product-filter-button">
+			<i class="cond-filter"><a>Кондиционеры</a></i>
+			<i class="eco-filter"><a>Эко</a></i>
+			<i class="air-filter"><a>Воздушные завесы</a></i>
+			<i class="radiator-filter"><a>Радиаторы отопления</a></i>
+			<i class="gas-filter"><a>Газовые колонки</a></i>
+			<i class="electro-filter"><a>Злектрические водонагреватели</a></i>
+			<i class="cotel-filter"><a>Котлы</a></i>
+			<i class="convector-filter"><a>Конвекторы</a></i>
+		</div>
 <!-- 		<p align="center">Популярные товары</p> -->
 		<div class="pop-wrapper">
 		<div class="pop-conditioners">
@@ -360,102 +1046,6 @@
 		</div>
 	</div>
 	</div>
-<!-- 	<section class="offers-wrap">
-	<div class="shares">Акции!</div>
-	<div class="offers">
-
-		<div class="offers-cond">
-			<div class="offers-title"><div>Бесплатный Монтаж !!!</div></div>
-			<div class="offers-cond-wrap">
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-1.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Кондиционер LBS-ODN10/LBU-ODN10</div>
-			</div>
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-2.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Leberg LBS-ODN10/LBU-ODN10</div>
-			</div>
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-3.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Кондиционер сплит Leberg LBS-ODN10/LBU-ODN10</div>
-			</div>
-			</div>
-		</div>
-	</div>
-	</section> -->
-		
-<!-- 	<div class="advantages-wrapper">
-	<h2 align="center">Наши преимущества</h2>
-	<div class="advantages">
-
-	<div class="adv advantages-1">
-		<img src="img/percentage.svg"/>
-		<P>Низкие цены</P>
-	</div>
-	<div class="adv advantages-2">
-		<img src="img/recommended.svg"/>
-		<P>Гарантия качества</P>
-	</div>
-	<div class="adv advantages-3">
-		<img src="img/trucking.svg"/>
-	<P>Доставка</P>
-	</div>
-	</div>
-	</div> -->
-	<!-- <section>
-
-	<div class="latest-wrap">
-		<h2 align="center">Новости</h2>
-		<div class="single-item">
-		<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-1.jpeg"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондиционер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее-></a>
-		</div>
-		</div>
-		
-				<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-2.png"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондиsdfsdfsdfционер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее-></a>
-		</div>
-		</div>
-		
-				<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-3.png"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондициsererereонер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее</a>
-		</div>
-		</div>
-		
-		
-		</div>
-	</div>
-	</section> -->
 	<footer>
 	<div class="footer">
 		<div class="footer-contact">
