@@ -1034,7 +1034,7 @@ input[type=checkbox]
   content: "Свернуть все";
 }
 .product-filter-button{
-	font-family: Open Sans, sans-serif;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
 	margin-top:40px;
 	position:relative;
 	width:100%;
