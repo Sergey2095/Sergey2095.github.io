@@ -9,19 +9,20 @@
 		var cotelFilter = $(".cotel-filter");
 		var convectorFilter = $(".convector-filter");
 		
-		
-		var condAccordContainer = $(".cond-accord-container");
-		var ecoAccordContainer = $(".eco-accord-container");
-		var airAccordContainer = $(".air-accord-container");
-		var radiatorAccordContainer = $(".radiator-accord-container");
-		var gasAccordContainer = $(".gas-accord-container");
-		var electroAccordContainer = $(".electro-accord-container");
-		var cotelAccordContainer = $(".cotel-accord-container");
-		var convectorAccordContainer = $(".convector-accord-container");
+		var accordContainer = $(".accord-container");
+		var condAccordContainer = $(".cond-accord");
+		var ecoAccordContainer = $(".eco-accord");
+		var airAccordContainer = $(".air-accord");
+		var radiatorAccordContainer = $(".radiator-accord");
+		var gasAccordContainer = $(".gas-accord");
+		var electroAccordContainer = $(".electro-accord");
+		var cotelAccordContainer = $(".cotel-accord");
+		var convectorAccordContainer = $(".convector-accord");
 		
 		
 		
 		condFilter.click(function(){
+			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
 			airAccordContainer.hide();
@@ -32,6 +33,7 @@
 			condAccordContainer.show();
 		});
 		ecoFilter.click(function(){
+			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
 			airAccordContainer.hide();
@@ -42,6 +44,7 @@
 			ecoAccordContainer.show();
 		});
 		airFilter.click(function(){
+			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
 			condAccordContainer.hide();
@@ -52,6 +55,7 @@
 			airAccordContainer.show();
 		});
 		radiatorFilter.click(function(){
+			accordContainer.show();
 			gasAccordContainer.hide();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
@@ -62,6 +66,7 @@
 			radiatorAccordContainer.show();
 		});
 		gasFilter.click(function(){
+			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
 			airAccordContainer.hide();
@@ -71,7 +76,8 @@
 			convectorAccordContainer.hide();
 			gasAccordContainer.show();
 		});
-				electroFilter.click(function(){
+		electroFilter.click(function(){
+			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
 			airAccordContainer.hide();
@@ -81,7 +87,8 @@
 			gasAccordContainer.hide();
 			electroAccordContainer.show();
 		});
-				cotelFilter.click(function(){
+		cotelFilter.click(function(){
+			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
 			airAccordContainer.hide();
@@ -91,7 +98,8 @@
 			gasAccordContainer.hide();
 			cotelAccordContainer.show();
 		});
-				convectorFilter.click(function(){
+		convectorFilter.click(function(){
+			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
 			airAccordContainer.hide();
@@ -101,4 +109,25 @@
 			gasAccordContainer.hide();
 			convectorAccordContainer.show();
 		});
+		
+	$(".toggle-accordion").on("click", function() {
+    var accordionId = $(this).attr("accordion-id"),
+      numPanelOpen = $(accordionId + ' .collapse.in').length;
+    $(this).toggleClass("active");
+
+    if (numPanelOpen == 0) {
+      openAllPanels(accordionId);
+    } else {
+      closeAllPanels(accordionId);
+    }
+  })
+
+  openAllPanels = function(aId) {
+    console.log("setAllPanelOpen");
+    $(aId + ' .panel-collapse:not(".in")').collapse('show');
+  }
+  closeAllPanels = function(aId) {
+    console.log("setAllPanelclose");
+    $(aId + ' .panel-collapse.in').collapse('hide');
+  }
 	});

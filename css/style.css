@@ -107,9 +107,8 @@ body{
 }
 
 .search-submit:hover {
-	background: url(../img/search-hover.png)no-repeat;
-	background-position:center center;
-  
+	background: url(../img/search-hover.png)no-repeat !important;
+	background-position:center center !important;
 }
 /* .search{
 	background:url(../img/search.png)no-repeat;
@@ -947,8 +946,9 @@ input[type=checkbox]
 	color:#949496;
 } */
 .container {
- max-width: 220px !important;
+ min-width: 250px !important;
  margin-top:100px;
+ border:none;
 }
 
 .panel-default>.panel-heading {
@@ -969,7 +969,7 @@ input[type=checkbox]
 
 .panel-default>.panel-heading a:after {
   content: "";
-  position: relative;
+  position: absolute;
   top: 1px;
   display: inline-block;
   font-family: 'Glyphicons Halflings';
@@ -985,18 +985,24 @@ input[type=checkbox]
 
 .panel-default>.panel-heading a[aria-expanded="true"] {
   background-color: #eee;
+  position:relative;
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
   content: "\2212";
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+  position:absolute;
+  top:20px;
+  right:1px;
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
   content: "\002b";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  top:20px;
+    right: 1px;
 }
 
 .accordion-option {
@@ -1028,8 +1034,10 @@ input[type=checkbox]
   content: "Свернуть все";
 }
 .product-filter-button{
+	font-family: Open Sans, sans-serif;
+	margin-top:40px;
 	position:relative;
-	width:1200px;
+	width:100%;
 	display:flex;
 	flex-direction:row;
 	justify-content:center;
@@ -1037,23 +1045,26 @@ input[type=checkbox]
 }
 .product-filter-button i{
 	font-style:normal;
-	width:100px;
+	width:220px;
 	height:50px;
 	display:flex;
 	justify-content:center;
 	align-items:center;
-		color:#000;
-
-	border: 1px solid #949496;;
+	color:#1e2126;
+	border: none;
 	border-radius:7px;
 	text-align:center;
 	vertical-align:middle;
-margin-right:30px;
-	font-size:12px;
+	margin-right:30px;
+	font-size:26px;
+}
+.product-filter-button i:last-child{
+		margin-right:0px;
 }
 
 .product-filter-button a{
-	color:#000;
+	line-height:1;
+	color:#1e2126;
 	text-decoration:none;
 }
 .product-filter-button i:first-child{
@@ -1061,35 +1072,58 @@ margin-right:30px;
 }
 .product-filter-button a:hover{
 	text-decoration:none;
-	color:#000;
+	color:#00deff;
 }
 .product-filter-button i:hover{
 	border:none;
 	cursor:pointer;
-	background-color:#5ecb32;
 	text-decoration:none;
 }
-.eco-accord-container{
+.panel-heading a{
+	background-color:#fff !important;
+	border:none;
+	position:relative;
+}
+.panel-default{
+	border:none !important;
+}
+.panel-group{
+	border-right:1px solid #e4e5e7 ;
+}
+.panel-body{
+	border-bottom:1px solid #e4e5e7 !important;
+	border-top:none !important;
+}
+.panel-body:last-child{
+	border-bottom:none;
+}
+/* .panel-heading a{
+	background-color:#fff;
+} */
+.eco-accord{
 	display:none;
 }
-.cond-accord-container{
+.cond-accord{
 	display:none;
 }
-.air-accord-container{
+.air-accord{
 	display:none;
 }
-.radiator-accord-container{
+.radiator-accord{
 	display:none;
 }
-.gas-accord-container{
+.gas-accord{
 	display:none;
 }
-.electro-accord-container{
+.electro-accord{
 	display:none;
 }
-.cotel-accord-container{
+.cotel-accord{
 	display:none;
 }
-.convector-accord-container{
+.convector-accord{
+	display:none;
+}
+.accord-container{
 	display:none;
 }

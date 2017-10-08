@@ -12,28 +12,6 @@
       nextArrow:"<img class='a-right control-c next slick-next' src='img/next.png'>",
 	});
 	
-	  $(".toggle-accordion").on("click", function() {
-    var accordionId = $(this).attr("accordion-id"),
-      numPanelOpen = $(accordionId + ' .collapse.in').length;
-    
-    $(this).toggleClass("active");
-
-    if (numPanelOpen == 0) {
-      openAllPanels(accordionId);
-    } else {
-      closeAllPanels(accordionId);
-    }
-  })
-
-  openAllPanels = function(aId) {
-    console.log("setAllPanelOpen");
-    $(aId + ' .panel-collapse:not(".in")').collapse('show');
-  }
-  closeAllPanels = function(aId) {
-    console.log("setAllPanelclose");
-    $(aId + ' .panel-collapse.in').collapse('hide');
-  }
-	
 	});
 	$(document).ready(function() {
 	var body = $('body');
@@ -129,6 +107,7 @@ body.click(function(e){
 			"background-position": "center center",
 
 		});
+
 					searchText.css({
 			"width":0+"px",
 			"z-index":"0",
