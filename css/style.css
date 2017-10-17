@@ -1166,6 +1166,20 @@ color:#949496;
 	justify-content:space-between;
 	align-items:center;
 }
+.summury{
+	margin-left:30px;
+	font-size:18px;
+}
+.summury-number{
+	color:#ff5500;
+	margin-left:30px;
+}
+.summury-number-price{
+	font-size:42px;
+}
+.summury-number-grn{
+	
+}
 .form-control{
     position: relative;
     display: block;
@@ -1225,6 +1239,17 @@ color:#949496;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
+	}
+	.help-info:after{
+			content:'?';
+			position: relative;
+			left: 7px;
+			top: 1px;
+			font-size: 15px;
+		}
+	.help-info:active{
+		background-color:#00deff;
+		color:#fff;
 	}
 	.btn-default{
 	border-radius:26px !important;
@@ -1288,7 +1313,7 @@ color:#949496;
 	}
 		.count-plus:after{
 			content:'+';
-			color:blue;
+			color:#00deff;
 			position: relative;
 			left: 5px;
 			top: -3px;
@@ -1296,7 +1321,7 @@ color:#949496;
 		}
 		.count-minus:after{
 			content:'-';
-			color:blue;
+			color:#00deff;
 			position: absolute;
 			left: 7px;
 			top: -5px;
@@ -1312,13 +1337,21 @@ color:#949496;
 	.cart-product-first-field label{
 		width:100% !important;
 	}
-	
+	.cart-checkbox{
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+	}
 	.product-field-text{
+		color:#a2a2a2;
 		border: 1px solid #f4f4f4;
 		border-radius:18px;
 		width:80%;
 		height:40px;
 		vertical-align:middle;
+		display:flex;
+		justify-content:center;
+		align-items:center;
 	}
 	    
 
