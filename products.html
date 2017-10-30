@@ -211,7 +211,7 @@
         <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <h4 class="cond-accord">Цена, грн.</h4>
-          <h4 class="eco-accord">Производители</h4>
+          <h4 class="eco-accord">Цена, грн.</h4>
           <h4 class="air-accord">Тип нагрева</h4>
           <h4 class="radiator-accord">Цена, грн.</h4>
           <h4 class="gas-accord">Тип камеры сгорания</h4>
@@ -235,14 +235,19 @@
 				</div>
 			</div>
 			
+			
 			<div class="eco-accord">
-				<div class="checkbox">
-				  <label><input type="checkbox" value="">Neoclima</label>
-				</div>
-				<div class="checkbox">
-				  <label><input type="checkbox" value="" >Panasonic</label>
+				<div class="col-xs-1">
+				<label for="ex1">от</label>
+				<input class="form-control" id="ex1" type="text">
 				</div>	
+				<div class="col-xs-1">
+				<label for="ex1">до</label>
+				<input class="form-control" id="ex1" type="text">
+				</div>
 			</div>
+			
+			
 			
 			<div class="air-accord">
 				<div class="checkbox">
@@ -474,7 +479,7 @@
           <h4 class="air-accord">Ширина двери, м.</h4>
         <!--   <h4 class="radiator-accord"></h4>
           <h4 class="gas-accord"></h4> -->
-          <h4 class="electro-accord">Ширина двери, м.</h4>
+          <h4 class="electro-accord">Тип установки</h4>
           <h4 class="cotel-accord">Топливо</h4>
           <!-- <h4 class="convector-accord"></h4> -->
         </a>
@@ -568,13 +573,13 @@
 		</div>
       </div>
     </div>
-	    <div class="panel panel-default cond-accord eco-accord electro-accord cotel-accord">
+	    <div class="panel panel-default cond-accord eco-accord electro-accord cotel-accord air-accord">
       <div class="panel-heading" role="tab" id="headingFive">
         <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
          <h4 class="cond-accord"> Wi-Fi модуль</h4>
-          <h4 class="eco-accord">Цена, грн.</h4>
-          <h4 class="air-accord"></h4>
+          <h4 class="eco-accord">Производители</h4>
+          <h4 class="air-accord">Производители</h4>
           <h4 class="radiator-accord"></h4>
           <h4 class="gas-accord"></h4>
           <h4 class="electro-accord">Форма бойлера</h4>
@@ -594,16 +599,25 @@
 				</div>
 			</div>
 			
+			
 			<div class="eco-accord">
-				<div class="col-xs-1">
-				<label for="ex1">от</label>
-				<input class="form-control" id="ex1" type="text">
-				</div>	
-				<div class="col-xs-1">
-				<label for="ex1">до</label>
-				<input class="form-control" id="ex1" type="text">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Neoclima</label>
 				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Panasonic</label>
+				</div>	
 			</div>
+			
+			<div class="air-accord">
+				<div class="checkbox">
+				  <label><input type="checkbox" value="">Neoclima</label>
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" >Rada</label>
+				</div>	
+			</div>
+			
 			
 			<div class="air-accord">
 			
@@ -712,11 +726,11 @@
 	<div class="popular">
 		<div class="product-filter-button">
 			<i class="cond-filter"><a>Кондиционеры</a></i>
-			<i class="electro-filter"><a>Электрические водонагреватели</a></i>
+			<i class="electro-filter"><a>Водонагреватели</a></i>
 			<i class="air-filter"><a>Воздушные завесы</a></i>
 			<i class="cotel-filter"><a>Котлы</a></i>
 		</div>
-		<div class="product-filter-button">
+		<div class="product-filter-button under-list">
 			<i class="convector-filter"><a>Конвекторы</a></i>
 			<i class="gas-filter"><a>Газовые колонки</a></i>
 			<i class="radiator-filter"><a>Радиаторы отопления</a></i>

@@ -149,6 +149,10 @@ body{
 .logo:hover{
 	cursor:pointer;
 }
+
+.menu-button{
+	display:none;
+}
 .menu{
 	display:flex;
 	flex-direction:row;
@@ -853,6 +857,7 @@ display: block;
 .product-wrap .price{	
 	margin-left:25px;
 	color:#ff5500;
+	font-weight:700;
 }
 .product-wrap .buy-compar{
 	display:flex;
@@ -965,6 +970,10 @@ input[type=checkbox]
 .panel-default>.panel-heading a {
   display: block;
   padding: 10px 15px;
+  padding-bottom:0px !important;
+}
+.panel-default>.panel-heading a:hover {
+	text-decoration:none;
 }
 
 .panel-default>.panel-heading a:after {
@@ -989,20 +998,22 @@ input[type=checkbox]
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
-  content: "\2212";
+  content: "-";
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   position:absolute;
   top:20px;
   right:1px;
+  font-size:15px;
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
-  content: "\002b";
+  content: "+";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   top:20px;
-    right: 1px;
+  right: 1px;
+  font-size:15px;
 }
 
 .accordion-option {
@@ -1026,16 +1037,16 @@ input[type=checkbox]
   color: #6a6c6f;
 }
 
-.accordion-option .toggle-accordion:before {
+/* .accordion-option .toggle-accordion:before {
   content: "Паказать все";
 }
 
 .accordion-option .toggle-accordion.active:before {
   content: "Свернуть все";
-}
+} */
 .product-filter-button{
 	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
-	margin-top:40px;
+	margin-top:10px;
 	position:relative;
 	width:100%;
 	display:flex;
@@ -1043,9 +1054,13 @@ input[type=checkbox]
 	justify-content:center;
 	align-items:center;
 }
+.under-list {
+	border-bottom: 1px solid #ddd;
+}
 .product-filter-button i{
+	/* white-space:nowrap; */
 	font-style:normal;
-	width:220px;
+	width:270px;
 	height:50px;
 	display:flex;
 	justify-content:center;
@@ -1093,6 +1108,7 @@ input[type=checkbox]
 .panel-body{
 	border-bottom:1px solid #e4e5e7 !important;
 	border-top:none !important;
+	padding-top:0px!important;
 }
 .panel-body:last-child{
 	border-bottom:none;
@@ -1132,6 +1148,11 @@ input[type=checkbox]
 }
 .panel-body{
 color:#949496;
+}
+.price-range{
+	display:flex;
+	flex-directoin:row;
+	
 }
 
 /*КООООРРРЗЗЗИИННААААА===========================================*/
@@ -1376,3 +1397,60 @@ color:#949496;
 	    
 
 /*КООООРРРЗЗЗИИННААААА=============КОНЕЦ==============================*/
+
+
+/*АДАПТИВНОСТЬ-------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+	.logo img {
+		margin-left:0px;
+	}
+	.header-bottom-panel{
+		justify-content:normal;
+	}
+	.compar-cart-wrap{
+		justify-self:flex-end;
+	}
+	.menu-button{
+		display:block;
+		justify-self:flex-start;
+	}
+	.menu{
+	display:flex;
+	flex-direction:column;
+}
+}
+@media screen and (max-width: 1200px) {
+	.menu{
+		display:none;
+	}
+}
+
+/*АДАПТИВНОСТЬ-------------------------------------------------------------*/
+
+/*JS-style--------------------------------------------------------------------*/
+.show-hide-menu{
+	display:flex;
+	float:left;
+	clear:both;
+}
+.header-bottom-panel{
+	display:inline;
+}
+.compar-cart-wrap{
+	float:right;
+	clear:right;
+	
+}
+.logo{
+	float:left;
+	
+}
+.menu-button{
+	float:left;
+	
+}
+
+.product-active a{
+	color: #00deff !important;
+}
+/*JS-style--------------------------------------------------------------------*/

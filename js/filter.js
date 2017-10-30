@@ -9,6 +9,8 @@
 		var cotelFilter = $(".cotel-filter");
 		var convectorFilter = $(".convector-filter");
 		
+
+		
 		var accordContainer = $(".accord-container");
 		var condAccordContainer = $(".cond-accord");
 		var ecoAccordContainer = $(".eco-accord");
@@ -22,6 +24,7 @@
 		
 		
 		condFilter.click(function(){
+			saveColor(1);
 			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
@@ -33,6 +36,7 @@
 			condAccordContainer.show();
 		});
 		ecoFilter.click(function(){
+			saveColor(2);
 			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
@@ -44,6 +48,7 @@
 			ecoAccordContainer.show();
 		});
 		airFilter.click(function(){
+			saveColor(3);
 			accordContainer.show();
 			gasAccordContainer.hide();
 			radiatorAccordContainer.hide();
@@ -55,6 +60,7 @@
 			airAccordContainer.show();
 		});
 		radiatorFilter.click(function(){
+			saveColor(4);
 			accordContainer.show();
 			gasAccordContainer.hide();
 			condAccordContainer.hide();
@@ -66,6 +72,7 @@
 			radiatorAccordContainer.show();
 		});
 		gasFilter.click(function(){
+			saveColor(5);
 			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
@@ -77,6 +84,7 @@
 			gasAccordContainer.show();
 		});
 		electroFilter.click(function(){
+			saveColor(6);
 			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
@@ -88,6 +96,7 @@
 			electroAccordContainer.show();
 		});
 		cotelFilter.click(function(){
+			saveColor(7);
 			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
@@ -99,6 +108,7 @@
 			cotelAccordContainer.show();
 		});
 		convectorFilter.click(function(){
+			saveColor(8);
 			accordContainer.show();
 			condAccordContainer.hide();
 			ecoAccordContainer.hide();
@@ -130,4 +140,37 @@
     console.log("setAllPanelclose");
     $(aId + ' .panel-collapse.in').collapse('hide');
   }
+  
 	});
+	
+	  	saveColor = function(param){
+$(".cond-filter, .electro-filter, .air-filter, .cotel-filter, .convector-filter, .gas-filter, .radiator-filter, .eco-filter ").removeClass('product-active');
+
+		if(param ==1){
+$(".cond-filter").addClass('product-active');
+}
+		if(param ==2){
+$(".eco-filter").addClass('product-active');
+}
+		if(param ==3){
+$(".air-filter").addClass('product-active');
+}
+		if(param ==4){
+$(".radiator-filter").addClass('product-active');
+}
+		if(param ==5){
+$(".gas-filter").addClass('product-active');
+}
+		if(param ==6){
+$(".electro-filter").addClass('product-active');
+}
+		if(param ==7){
+$(".cotel-filter").addClass('product-active');
+}
+		if(param ==8){
+$(".convector-filter").addClass('product-active');
+}
+
+
+
+}
