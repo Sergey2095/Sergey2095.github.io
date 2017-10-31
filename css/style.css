@@ -360,6 +360,9 @@ body{
 .product-wrap .popular{
 	margin-top:0px !important;
 }
+.product-wrap .checkbox input:checked + span{
+	color:#000 !important;
+}
 .popular p{
 	font-family:Open Sans, sans-serif;
 	font-size:28px;
@@ -1112,6 +1115,32 @@ input[type=checkbox]
 }
 .panel-body:last-child{
 	border-bottom:none;
+}
+.price-from{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	padding-right: 80px !important; 
+	padding-left:0px !important;
+}
+.price-from label{
+	max-width:none !important;
+	margin-right:5px;
+}
+.price-from input{
+	width:65px !important;
+}
+.price-to{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+.price-to label{
+	max-width:none !important;
+	margin-right:5px;
+}
+.price-to input{
+	width:65px !important;
 }
 /* .panel-heading a{
 	background-color:#fff;
