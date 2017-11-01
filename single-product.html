@@ -16,13 +16,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="slick/slick.min.js"></script>
       <script src="js/carusel.js"></script>
-      <script src="js/menu.js"></script>
+	        <script src="js/filter.js"></script>
+	        <script src="js/singleProduct.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="wrap">
-	<div class="header">
-		<div class="header-top-panel">
+	<div class="header-product">
+		<div class="header-top-panel-prod">
 			<div class="tel-first">+38(095)-83-53-469</div>
 			<div class="tel-second">+38(096)-99-93-242</div>
 
@@ -30,13 +31,11 @@
 			<!-- <div class="search"></div> -->
 		</div>
 		
-		<div  class="header-bottom-panel">
-			<div class="logo">
+		<div  class="header-bottom-panel-prod">
+			<a href="index.html"><div class="logo">
 				<i><img src="img/logo.png"/></i><span>Климат-комфорт</span>
-			</div>
-			<div class="menu-button">
-				<img src="img/menu.png"/>
-			</div>
+			</div></a>
+
 			<ul class="menu">
 				  <li><a href="products.html">ТОВАРЫ</a></li>
 				  <li><a href="#">АКЦИИ</a></li>
@@ -67,7 +66,7 @@
 				<a href="cart.html" class="cart">
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 459.529 459.529" style="enable-background:new 0 0 459.529 459.529;" xml:space="preserve" width="24px" height=24px">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 459.529 459.529" style="enable-background:new 0 0 459.529 459.529;" xml:space="preserve" width="24px" height="24px">
 <g>
 	<g>
 		<path d="M17,55.231h48.733l69.417,251.033c1.983,7.367,8.783,12.467,16.433,12.467h213.35c6.8,0,12.75-3.967,15.583-10.2    l77.633-178.5c2.267-5.383,1.7-11.333-1.417-16.15c-3.117-4.817-8.5-7.65-14.167-7.65H206.833c-9.35,0-17,7.65-17,17    s7.65,17,17,17H416.5l-62.9,144.5H164.333L94.917,33.698c-1.983-7.367-8.783-12.467-16.433-12.467H17c-9.35,0-17,7.65-17,17    S7.65,55.231,17,55.231z" fill="#FFFFFF"/>
@@ -81,17 +80,29 @@
 		</div>
 
 	</div>
-	<div class="main-image">
-		<p>С нами комфортно!</p>
-		<div class="bunner_buttons">
-			<i><a>Кондиционеры</a></i>
-			<i><a>Отопление</a></i>
-			<i><a>ЭКО</a></i>
-		</div>
-	</div>
 	
-	<div class="brand-carusel">
-		<div class="slider single-item-1">
+	
+	<div class="cart-wrapper">
+		<div class="cart-single-product-wrapper">
+		<div class="cart-product">
+		<h3>Кондиционер Toshiba RAS-13SKHP-ES</h3>
+<!-- 			<p class="product-title">Корзина</p> -->
+			<div class="slider-for-wrapper">
+				<div class="slider-for">
+					<div class="brand-1 each-brand"></div>
+					<div class="brand-2 each-brand"></div>
+					<div class="brand-3 each-brand"></div>
+					<div class="brand-4 each-brand"></div>
+					<div class="brand-5 each-brand"></div>
+					<div class="brand-6 each-brand"></div>
+					<div class="brand-7 each-brand"></div>
+					<div class="brand-8 each-brand"></div>
+					<div class="brand-9 each-brand"></div>
+					<div class="brand-10 each-brand"></div>
+				</div>
+			</div>
+		<div class="slider slider-nav">
+		
 			<div class="brand-1 each-brand"></div>
 			<div class="brand-2 each-brand"></div>
 			<div class="brand-3 each-brand"></div>
@@ -103,12 +114,49 @@
 			<div class="brand-9 each-brand"></div>
 			<div class="brand-10 each-brand"></div>
 		</div>
+				<div class="single-product-tabs">
+					<div class="single-description">Описание</div>
+					<div class="single-character">Характеристики</div>
+					<div class="single-feedback">Отзывы</div>
+				</div>
+		</div>
+		</div>
+		<div class="wrapper-single-product-buy">
+			<div class="single-product-buy">
+				<div class="price-buy-block">
+					<div class="exist-price">
+						<div>$15000</div>
+						<div>Есть в наличии</div>
+					</div>
+					<button type="submit" class="btn btn-default">Купить</button>
+				</div>
+				
+				<div id="reviewStars-input">
+					<input id="star-4" type="radio" name="reviewStars"/>
+					<label title="gorgeous" for="star-4"></label>
+
+					<input id="star-3" type="radio" name="reviewStars"/>
+					<label title="good" for="star-3"></label>
+
+					<input id="star-2" type="radio" name="reviewStars"/>
+					<label title="regular" for="star-2"></label>
+
+					<input id="star-1" type="radio" name="reviewStars"/>
+					<label title="poor" for="star-1"></label>
+
+					<input id="star-0" type="radio" name="reviewStars"/>
+					<label title="bad" for="star-0"></label>
+				</div>
+				
+
+			</div>
+		</div>
+		
 	</div>
-	
-	<div class="popular">
-		<p align="center">Популярные товары</p>
-		<div class="pop-wrapper">
-		<div class="pop-conditioners">
+
+	<div class="similar-product-wrapper">
+		<h3 align="center">Похожие товары</h3>
+		<div class="similar-product">
 			<div class="conditioner-col">
 				<div class="col-1 cond"><img src="img/pop-cond-1.jpg"/></div>
 				<a href="single-product.html" class="cond-name">Кондиционер LBS-ODN10/LBU-ODN10</a>
@@ -142,141 +190,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="conditioner-col">
-				<div class="col-4 cond"><img src="img/pop-cond-4.jpg"/></div>
-				<a href="#" class="cond-name">Кондиционер сплит Leberg LBS-ODN10/LBU-ODN10</a>
-				<div class="price-buy-compare">
-					<div class="price">$999</div>
-					<div class="buy-compar">
-					<a href="#" class="btn btn-info buy" role="button">Купить</a>
-					<a href="#"><div class="compar"></div></a>
-					</div>
-				</div>
-			</div>
-			<div class="conditioner-col">
-				<div class="col-5 cond"><img src="img/pop-cond-5.jpg"/></div>
-				<a href="#" class="cond-name">Кондиционер VFE09AF5</a>
-				<div class="price-buy-compare">
-					<div class="price">$999</div>
-					<div class="buy-compar">
-					<a href="#" class="btn btn-info buy" role="button">Купить</a>
-					<a href="#"><div class="compar"></div></a>
-					</div>
-				</div>
-			</div>
-			<div class="conditioner-col">
-				<div class="col-6 cond"><img src="img/pop-cond-6.jpg"/></div>
-				<a href="#" class="cond-name">Кондиционер сплит Vestfrost VFE09AF5</a>
-				<div class="price-buy-compare">
-					<div class="price">$999</div>
-					<div class="buy-compar">
-					<a href="#" class="btn btn-info buy" role="button">Купить</a>
-					<a href="#"><div class="compar"></div></a>
-					</div>
-				</div>
-			</div>
 		</div>
-		</div>
+		
 	</div>
-<!-- 	<section class="offers-wrap">
-	<div class="shares">Акции!</div>
-	<div class="offers">
 
-		<div class="offers-cond">
-			<div class="offers-title"><div>Бесплатный Монтаж !!!</div></div>
-			<div class="offers-cond-wrap">
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-1.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Кондиционер LBS-ODN10/LBU-ODN10</div>
-			</div>
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-2.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Leberg LBS-ODN10/LBU-ODN10</div>
-			</div>
-			<div class="offers-cond-item">
-				<div class="cond-wrap">
-					<img src="img/cond-sale-3.jpg"/>
-					<div class="sale">Sale 30 %</div>
-				</div>
-				<div class="cond-name">Кондиционер сплит Leberg LBS-ODN10/LBU-ODN10</div>
-			</div>
-			</div>
-		</div>
-	</div>
-	</section> -->
-		
-	<div class="advantages-wrapper">
-	<h2 align="center">Наши преимущества</h2>
-	<div class="advantages">
-
-	<div class="adv advantages-1">
-		<img src="img/percentage.svg"/>
-		<P>Низкие цены</P>
-	</div>
-	<div class="adv advantages-2">
-		<img src="img/recommended.svg"/>
-		<P>Гарантия качества</P>
-	</div>
-	<div class="adv advantages-3">
-		<img src="img/trucking.svg"/>
-	<P>Доставка</P>
-	</div>
-	</div>
-	</div>
-	<section>
-
-	<div class="latest-wrap">
-		<h2 align="center">Новости</h2>
-		<div class="single-item">
-<!-- 			<div style="width:300px; height:300px; background-color:red;">1</div>
-			<div style="width:300px; height:300px; background-color:blue;">1</div>
-			<div style="width:300px; height:300px; background-color:yellow;">1</div> -->
-		<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-1.jpeg"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондиционер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее-></a>
-		</div>
-		</div>
-		
-				<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-2.png"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондиsdfsdfsdfционер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее-></a>
-		</div>
-		</div>
-		
-				<div class="latest">
-			<div class="latest-img">
-				<img src="img/latest-cond-3.png"/>
-			</div>
-		<div class="description">
-			<div class="description-title"><a>Кондициsererereонер LBS-ODN10/LBU-ODN10</a></div>
-			<div class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem, dicta doloremque eum explicabo ipsam labore optio, perferendis ratione sequi sit. Ad dicta, distinctio eligendi eos explicabo maxime voluptate. Consequatur deleniti, dolorem exercitationem laborum magni maiores nam natus nesciunt quibusdam quis tempora, unde veritatis vitae! Adipisci deserunt doloremque inventore?</div>
-			<div class="date">31.08.2017</div>
-			<a class="read-more">Читать далее</a>
-		</div>
-		</div>
-		
-		
-		</div>
-	</div>
-	</section>
 	<footer>
 	<div class="footer">
 		<div class="footer-contact">
